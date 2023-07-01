@@ -1,15 +1,16 @@
-let greenCharacter = document.createElement('img')
-greenCharacter.src = 'assets/green-character.gif'
-greenCharacter.style.position = 'fixed'
-greenCharacter.style.left = '100px'
-greenCharacter.style.bottom = '100px'
-document.body.append(greenCharacter)
 
 
-let pineTree = document.createElement('img')
-pineTree.src = 'assets/pine-tree.png'
-pineTree.style.position = 'fixed'
-pineTree.style.left = '450px'
-pineTree.style.bottom = '200px'
-document.body.append(pineTree)
+green_character_img = newImage('assets/green-character.gif', '100px', '100px' )
+pine_tree_img = newImage('assets/pine-tree.png', '450px', '200px' )
+
+function newImage(url, left_pos, bottom_pos){
+    let image = document.createElement('img')
+    image.src = url
+    image.style.position = 'fixed'
+    image.style.left = left_pos
+    image.style.bottom = bottom_pos
+    document.body.append(image)
+    document.body.append(image)
+    return image
+}
 
